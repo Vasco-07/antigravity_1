@@ -9,16 +9,62 @@
 </head>
 <body>
 
-    <!-- LOGIN SCREEN -->
-    <div id="login-view" class="fullscreen-view">
-        <div class="glass-card login-card">
-            <h1 class="glow-text">CodeMaster</h1>
-            <p>Your journey to programming mastery begins here.</p>
-            <form id="login-form">
-                <input type="text" id="username-input" placeholder="Enter your developer handle..." required autocomplete="off">
-                <button type="submit" class="btn btn-primary glow-btn" style="width: 100%;">Initialize Learning //></button>
-            </form>
-        </div>
+    <!-- LANDING PAGE VIEW -->
+    <div id="landing-view" style="display: flex; flex-direction: column; width: 100%; min-height: 100vh;">
+        <!-- Navbar -->
+        <header class="landing-nav glass-panel">
+            <h2 class="glow-text" style="font-size: 1.8rem; margin:0; letter-spacing:-1px;">CodeMaster</h2>
+            <a href="#auth-section" class="btn btn-primary glow-btn">Start Learning</a>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+            </div>
+            
+            <h1 class="hero-title">Master Coding in <br><span class="glow-text">Real-Time.</span></h1>
+            <p class="hero-subtitle">The most structured, efficient, and professional learning platform designed to take you from basic syntax to software engineering mastery.</p>
+            <div style="margin-top: 2.5rem;">
+                <a href="#auth-section" class="btn btn-primary glow-btn" style="padding: 1.2rem 2.5rem; font-size: 1.1rem; border-radius: 50px;">Access the Academy</a>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features-section">
+            <div class="glass-card feature-card">
+                <div style="font-size: 2.5rem; margin-bottom: 1rem;">🗺️</div>
+                <h3 class="glow-text">Structured Paths</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">Strictly ordered modules from Beginner to Advanced. No skipping the fundamentals.</p>
+            </div>
+            <div class="glass-card feature-card">
+                <div style="font-size: 2.5rem; margin-bottom: 1rem;">⚡</div>
+                <h3 class="glow-text">Real-time Progress</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">Track your completion dynamically across multiple languages with our visual engine.</p>
+            </div>
+            <div class="glass-card feature-card">
+                <div style="font-size: 2.5rem; margin-bottom: 1rem;">💎</div>
+                <h3 class="glow-text">Premium Resources</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">Curated external video tutorials, documentation, and practice platforms all in one place.</p>
+            </div>
+        </section>
+
+        <!-- Auth Section -->
+        <section id="auth-section" class="auth-section">
+            <div class="glass-card login-card">
+                <h2 style="font-size: 2.2rem; margin-bottom: 0.5rem; letter-spacing:-1px;" class="glow-text">Initialize Learning</h2>
+                <p style="color: var(--text-muted); margin-bottom: 2rem;">Enter your developer handle to sync your progress.</p>
+                <form id="login-form">
+                    <input type="text" id="username-input" placeholder="Developer handle..." required autocomplete="off">
+                    <button type="submit" class="btn btn-primary glow-btn" style="width: 100%;">Enter Platform //></button>
+                </form>
+            </div>
+        </section>
+        
+        <footer style="text-align:center; padding: 2rem; color: var(--text-muted); font-size: 0.9rem;">
+            &copy; 2026 CodeMaster Learning Platform. All rights reserved.
+        </footer>
     </div>
 
     <!-- MAIN APP SCREEN -->

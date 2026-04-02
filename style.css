@@ -103,18 +103,100 @@ body {
     border: 1px solid rgba(255,255,255,0.1);
 }
 
-/* Auth View */
-.fullscreen-view {
-    height: 100vh;
+/* Landing & Auth View */
+html { scroll-behavior: smooth; }
+
+.landing-nav {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    padding: 1rem;
+    padding: 1.5rem 4rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-.login-card { width: 100%; max-width: 450px; text-align: center; padding: 3rem 2rem; }
-.login-card h1 { font-size: 2.8rem; margin-bottom: 0.5rem; letter-spacing: -1px; }
-.login-card p { color: var(--text-muted); margin-bottom: 2.5rem; }
+.hero-section {
+    text-align: center;
+    padding: 8rem 2rem 6rem;
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-size: 4.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    letter-spacing: -2px;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.features-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem 4rem 6rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+.feature-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.auth-section {
+    padding: 4rem 2rem 8rem;
+    background: linear-gradient(to bottom, transparent, rgba(0,240,255,0.03));
+    display: flex;
+    justify-content: center;
+}
+
+.login-card { width: 100%; max-width: 480px; text-align: center; padding: 3.5rem 2.5rem; }
+
+.hero-shapes .shape {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: -1;
+    animation: float 10s infinite ease-in-out alternate;
+}
+
+.shape-1 {
+    width: 300px;
+    height: 300px;
+    background: rgba(0, 240, 255, 0.15);
+    top: 10%;
+    left: -10%;
+}
+
+.shape-2 {
+    width: 400px;
+    height: 400px;
+    background: rgba(176, 38, 255, 0.15);
+    bottom: -10%;
+    right: -10%;
+    animation-delay: -5s;
+}
+
+@keyframes float {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(30px, 50px) scale(1.1); }
+}
 
 input[type="text"] {
     width: 100%; padding: 1rem 1.2rem; background: rgba(0,0,0,0.5);
@@ -195,4 +277,9 @@ input[type="text"]:focus { border-color: var(--neon-blue); box-shadow: 0 0 15px 
     .module-row { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
     .module-row > div { width: 100%; }
     .module-row > div:last-child { align-items: flex-start; flex-direction: column; }
+    
+    .landing-nav { padding: 1.5rem; }
+    .hero-title { font-size: 3rem; }
+    .features-section { padding: 1rem 1.5rem 4rem; }
+    .login-card { padding: 2.5rem 1.5rem; }
 }

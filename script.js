@@ -45,7 +45,7 @@ const RESOURCES = [
 let appState = { username: null, completedModules: [] };
 
 document.addEventListener("DOMContentLoaded", () => {
-    if (!document.getElementById('login-view')) return;
+    if (!document.getElementById('landing-view')) return;
 
     loadState();
     if (appState.username) showApp();
@@ -86,7 +86,7 @@ window.completeModule = function(moduleId) {
 };
 
 function showLogin() {
-    const loginView = document.getElementById('login-view');
+    const loginView = document.getElementById('landing-view');
     const appView = document.getElementById('app-view');
     if (loginView && appView) {
         loginView.style.display = 'flex';
@@ -95,7 +95,7 @@ function showLogin() {
 }
 
 function showApp() {
-    const loginView = document.getElementById('login-view');
+    const loginView = document.getElementById('landing-view');
     const appView = document.getElementById('app-view');
     const userBadge = document.getElementById('display-username');
     
