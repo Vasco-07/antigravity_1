@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeMaster | Learning Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- LOGIN SCREEN -->
+    <div id="login-view" class="fullscreen-view">
+        <div class="glass-card login-card">
+            <h1 class="glow-text">CodeMaster</h1>
+            <p>Your journey to programming mastery begins here.</p>
+            <form id="login-form">
+                <input type="text" id="username-input" placeholder="Enter your developer handle..." required autocomplete="off">
+                <button type="submit" class="btn btn-primary glow-btn" style="width: 100%;">Initialize Learning //></button>
+            </form>
+        </div>
+    </div>
+
+    <!-- MAIN APP SCREEN -->
+    <div id="app-view" style="display: none;">
+        <!-- Sidebar -->
+        <nav class="sidebar glass-panel">
+            <div class="brand" style="margin-bottom: 2rem;">
+                <h2 class="glow-text" style="font-size: 1.5rem;">CodeMaster</h2>
+                <div class="user-badge" id="display-username">User</div>
+            </div>
+            
+            <ul class="nav-links">
+                <li data-target="dashboard" class="nav-item active">
+                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                    Dashboard
+                </li>
+                <li data-target="guides" class="nav-item">
+                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                    Coding Guides
+                </li>
+                <li data-target="resources" class="nav-item">
+                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                    Resources
+                </li>
+            </ul>
+
+            <button id="logout-btn" class="btn btn-outline glow-btn mt-auto" style="width: 100%;">System Logout</button>
+        </nav>
+
+        <!-- Main Content Wrapper -->
+        <main class="content-area">
+            
+            <!-- Dashboard View -->
+            <section id="view-dashboard" class="view-section active">
+                <header class="section-header">
+                    <h1>Dashboard</h1>
+                    <p>Track your progression and resume your learning paths.</p>
+                </header>
+
+                <div class="glass-card quote-card mb-4 mt-3">
+                    <p id="motivational-quote">"First, solve the problem. Then, write the code."<br><small style="color: #bbb; display: block; margin-top: 0.5rem;">– John Johnson</small></p>
+                </div>
+
+                <div class="grid-2">
+                    <div class="glass-card">
+                        <h3 style="font-size: 1.2rem; margin-bottom: 1rem;">Mastery Progress</h3>
+                        <div class="progress-bar-container mt-2">
+                            <div class="progress-info">
+                                <span>Overall Completion</span>
+                                <span id="overall-progress-text" class="glow-text">0%</span>
+                            </div>
+                            <div class="progress-track">
+                                <div id="overall-progress-fill" class="progress-fill neon-bg"></div>
+                            </div>
+                        </div>
+
+                        <ul id="completed-topics-list" class="topic-list mt-3">
+                            <!-- JS populates this -->
+                        </ul>
+                    </div>
+
+                    <div class="glass-card">
+                        <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Continue Learning</h3>
+                        <p style="color: #aaa; font-size: 0.9rem;">Jump right back into your active curriculum.</p>
+                        <div id="continue-learning-widget" class="mt-3">
+                            <!-- JS populated -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Coding Guides View -->
+            <section id="view-guides" class="view-section" style="display: none;">
+                <header class="section-header">
+                    <h1>Programming Guides</h1>
+                    <p>Structured roadmaps taking you from syntax to advanced algorithms.</p>
+                </header>
+
+                <div class="path-grid" id="paths-container">
+                    <!-- Javascript will dynamically inject the arrays here -->
+                </div>
+            </section>
+
+            <!-- Resources View -->
+            <section id="view-resources" class="view-section" style="display: none;">
+                <header class="section-header">
+                    <h1>External Resources</h1>
+                    <p>Curated tutorials, documentation, and practice platforms.</p>
+                </header>
+
+                <div class="resource-grid mt-3">
+                    <!-- JS populated -->
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
